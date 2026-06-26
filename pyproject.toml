@@ -1,0 +1,24 @@
+[project]
+name = "pdf-splitter"
+version = "0.1.0"
+description = "审图用PDF拆分器 - 工程图纸PDF自动拆分命名工具"
+requires-python = ">=3.13"
+dependencies = [
+    "customtkinter>=6.0.0",
+    "easyocr>=1.7.2",
+    "pillow>=12.2.0",
+    "pymupdf>=1.27.2.3",
+    "tkinterdnd2>=0.5.0",
+]
+
+[project.scripts]
+pdf-splitter = "pdf_splitter.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.21.0",
+]
